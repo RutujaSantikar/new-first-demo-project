@@ -1,0 +1,26 @@
+<div class="calibration-container flex flex-col justify-center items-center lg:w-30">
+  <h1 class="font-sans text-bold">Calibration form</h1>
+<form class="border-2 p-10  rounded-xl"  [formGroup]="calibrationForm">
+ <h3>Calibration data</h3>
+ <mat-form-field appearance="fill">
+   <select matNativeControl required formControlName="calibrationData" >
+    <option *ngFor="let calibration of Calibration" [ngValue]="calibration"> {{ calibration.name }}</option>
+   </select>
+ </mat-form-field>
+
+
+ <h3>Instruments</h3>
+ <mat-form-field appearance="fill">
+   <select matNativeControl required formControlName="instrumentData">
+   <option  *ngFor="let instrument of Instruments" [ngValue]="instrument" >{{instrument.name}}</option>
+   </select>
+ </mat-form-field>
+
+</form>
+<button type="submit" class="border-2 mt-2 p-2 border-sky-900 bg-indigo-500 text-xl rounded-xl" (click)="calData()">Submit</button>
+
+
+
+
+</div>
+
