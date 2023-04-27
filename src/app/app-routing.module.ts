@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: 'calibration', component: CalibrationComponent },
     { path: 'drive', component: DriveComponent },
     { path: 'table', component: TableComponent },
-    // {path : 'dashboard', component: HeaderComponent},
+    {path : 'dashboard', component: HeaderComponent},
 
 
 

@@ -12,8 +12,11 @@ export class LoginService {
   public  loginUser(user:any):Observable<any>{
 
 
-    const url='http://welltracker.techlead-india.com:8080/authenticateUser?usrName='+user.username+'&usrPassword='+user.password+'';
-    // const url ='http://welltracker.techlead-india.com:8080/authenticateUser?usrName=&usrPassword=';
+    // const url='http://welltracker.techlead-india.com:8080/authenticateUser?usrName='+user.username+'&usrPassword='+user.password+'';
+    // // const url ='http://welltracker.techlead-india.com:8080/authenticateUser?usrName=&usrPassword=';
+    // return this.http.get<any>(url);
+
+    const url = "https://reqres.in/api/users?user=" + user.username + "&password=" + user.password + "";
     return this.http.get<any>(url);
 
 

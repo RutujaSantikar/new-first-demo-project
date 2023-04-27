@@ -34,7 +34,7 @@ export class LoginComponent   {
      this.btnstate = true;
       this.loginService.loginUser(this.loginUserForm.value).subscribe((response : any) =>{
        console.log(response );
-       this.router.navigate(['/calibration']);
+       this.router.navigate(['/dashboard']);
 
 
      })
